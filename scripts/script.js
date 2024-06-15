@@ -10,9 +10,19 @@ function gameBoard() {
       board[i].push(null);
     }
   }
-  const getBoard = () => board;
-
-  return {getBoard}
+  return { board };
 }
 
-let consoleBoard = gameBoard();
+function players(playerOne = "Player 1", playerTwo = "Player 2") {
+  let players = [
+    {
+      name: playerOne,
+      token: "X",
+    },
+    {
+      name: playerTwo,
+      token: "O",
+    },
+  ];
+  return { players };
+}
